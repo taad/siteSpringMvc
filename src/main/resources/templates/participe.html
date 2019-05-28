@@ -1,0 +1,117 @@
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>Associação de Surdos e Surdas de Presidente Prudente – “Dorvalino Paixão” (ASSPP)</title>
+
+    <!-- Bootstrap core CSS -->
+   
+
+    <!-- Custom fonts for this template -->
+    
+    
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
+
+    <!-- Custom styles for this template -->
+    <link type="Text/css" rel="stylesheet" th:href="@{/font-awesome.min.css}"/>
+    <link type="Text/css" rel="stylesheet" th:href="@{/bootstrap.min.css}"/>
+    <link type="Text/css" rel="stylesheet" th:href="@{/clean-blog.css}"/>
+    <link type="Text/css" rel="stylesheet" th:href="@{/slick.css}"/>
+    </head>
+
+  <body>
+    
+      <th:block th:include="cabecalhoconta"></th:block>
+
+<div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            
+            <h3>Faça Parte</h3>
+            <hr/>
+           <p>Para fazer parte da associação, surdos e familiares podem procurar a sede provisória, na Rua Ulisses Ramos de Castro, 268, Bosque. A taxa mensal será inicialmente de R$ 20.</p>
+
+            <p>Como a diretoria é formada somente por surdos e surdas, um grupo de ouvintes faz parte da coordenação ASSPP. O representante destas pessoas é Miriã Moraes, que pode receber ligações pelo telefone: (18) 99774-7007.</p>
+          <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+          <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+          <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+          <h3>Fale Conosco</h3>
+          <hr/>
+          <div class="alert alert-success alert-dismissible" th:if="${not #strings.isEmpty(mensagemSucesso)}">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <span th:text="${mensagemSucesso}"></span>
+            </div>
+            <div class="alert alert-danger alert-dismissible" th:if="${not #strings.isEmpty(mensagemErro)}">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <span th:text="${mensagemErro}"></span>
+            </div>
+          <form  id="contactForm" method="POST" action="participe" >
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Nome</label>
+                <input type="text" class="form-control" placeholder="Nome" id="nome" />
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Endereço de Email</label>
+                <input type="email" class="form-control" placeholder="Endereço de Email" id="email"/>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>Telefone</label>
+                <input type="tel" class="form-control" placeholder="Telefone" id="telefone"/>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Mensagem</label>
+                <textarea rows="5" class="form-control" placeholder="Mensagem" id="messagem"></textarea>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            
+            <div id="success"></div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar</button>
+            </div>
+          </form>
+          <hr/>
+          <h3>Estamos em : </h3>
+          <hr/>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3696.159282197308!2d-51.386556749247674!3d-22.119901885346025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f5b4182c7979%3A0xb7938b7b3be35d3!2sR.+Ulysses+Ramos+de+Castro%2C+268+-+Bairro+do+Bosque%2C+Pres.+Prudente+-+SP%2C+19010-110!5e0!3m2!1spt-BR!2sbr!4v1528230498671"
+                  width="600" height="450" frameborder="0" style="border:0"></iframe>
+                  <hr/>
+        </div>
+          
+      </div>
+    
+    </div>
+
+      
+
+
+
+    <hr/>
+<th:block th:include="novorodape"></th:block>
+    <!-- Bootstrap core JavaScript -->
+        <script th:src="@{/jquery.min.js}"></script>
+    <script th:src="@{/bootstrap.bundle.min.js}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script th:src="@{/clean-blog.min.js}"></script>
+<script th:src="@{/slick.js}"></script>
+  </body>
+
+</html>
+   

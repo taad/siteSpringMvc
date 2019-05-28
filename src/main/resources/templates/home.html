@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  
+        <style type="text/css">
+      .navbar-brand{
+          width: 150px;
+          display: block;
+          position:absolute;
+          top:0;
+          z-index: 3;
+      }
+      
+      .navbar-brand>img{
+          width: 100%;
+          
+      }
+      
+      .collapse {
+          margin-left: 110px !important;
+      }
+      
+      .nav>li>a{
+        transition: ease-out .3s;    
+          position: relative;
+          z-index: 5;
+          }
+      .nav>li>a:after{
+        position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          display: block;
+          z-index: -1;
+          content:"";
+          height: 0;
+          transition:ease-out .2s;
+          background:#00ffc0;
+      }
+      
+      .nav>li>a:hover:after{
+        height:100%;
+      }
+      .navbar-nav>li:nth-child(1)>a:after{
+          background:#00ffc0;
+      }
+      .navbar-nav>li:nth-child(2)>a:after{
+          background:#38eaff
+      }
+      
+      .navbar-nav>li:nth-child(3)>a:after{
+          background:#f0ff38
+      }
+      
+      .navbar-nav>li:nth-child(4)>a:after{
+          background:#ff3894
+      }
+      .navbar-nav>li>a:nth-child(5){
+          
+      }
+      
+    .nav>li>a:focus, .nav>li>a:hover {
+/*      background-color: #fa6f08;*/
+      
+         }
+        img.displayed {
+        display: block;
+    margin-left: auto;
+    margin-right: auto }
+      
+   
+  </style>
+    
+    
+    </head>
+    <body>
+         <th:block th:include="cabecalhoSite"></th:block>
+        <div class="container">
+        </div>
+            <h3>SISTEMA DE GERENCIAMENTO DO SITE ASSP</h3>
+        <div>TODO write content</div>
+        <img th:src="@{/img/logo.png}"/>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

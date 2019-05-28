@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Associção dos surdos</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    </head>
+    <body>
+        <th:block th:include="cabecalho"></th:block>
+        <div class="container">
+            <h3>Editar as noticias</h3>
+            <form method="POST" action="../AlterarNoticias">
+                <input type="hidden" name="id" th:value="${noticias.id}" />
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for ="titulo">Titulo</label>
+                        <input type="text" name="titulo" id="titulo" class="form-control" th:value="${noticias.titulo}"/>
+                    </div>
+                    <div class="col-md-6">
+                        <label for ="texto">Texto : </label> 
+                        <textarea  name="texto" id="texto" class="form-control" th:text="${noticias.texto}"> </textarea>
+                    </div>
+                    
+                    <div class="col-md-6">
+                       <label for ="usuario">Usuario responsável:</label>
+                            
+                            <select name="usuario" >
+                       <option th:each="usuario: ${usuarios}" th:value="${usuario.id}"  th:text="${usuario.nome}"/>
+                            </select>
+                    </div>
+                   
+                    
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="submit" value="Alterar" class="btn btn-primary"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
